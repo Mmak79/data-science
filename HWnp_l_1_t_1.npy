@@ -1,0 +1,7 @@
+import numpy as np
+B = np.array([[1, 2, 3, 3, 1],
+             [6, 8, 11, 10, 7]])
+A = B.transpose()
+mean_a = A.mean(axis=0)
+mean_a
+

@@ -1,0 +1,15 @@
+a_s1 = authors_price.groupby('author_name').agg({'price': 'min'})
+a_s1 = a_s1.rename(columns={'price':'min_price'})
+a_s1
+
+a_s2 = authors_price.groupby('author_name').agg({'price': 'max'})
+a_s2 = a_s2.rename(columns={'price':'max_price'})
+a_s2
+
+a_s3 = authors_price.groupby('author_name').agg({'price': 'mean'})
+a_s3 = a_s3.rename(columns={'price':'mean_price'})
+a_s3
+
+authors_st = pd.merge(a_s1, a_s2, on = 'author_name')
+authors_stat = pd.merge(authors_st, a_s3, on = 'author_name')
+authors_stat
