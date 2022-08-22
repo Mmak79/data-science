@@ -1,0 +1,6 @@
+v = a_centered.T
+v_1 = v[-1].copy()
+v_2 = v[0].copy()
+a_centered_sp = v_1.dot(v_2)
+a_c = a_centered_sp / 4
+a_c
